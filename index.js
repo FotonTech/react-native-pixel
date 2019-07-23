@@ -1,9 +1,9 @@
 import { scale } from 'react-native-size-matters'
 import { PixelRatio } from 'react-native'
 
-const numberToThemeFontSize = (n: number) => `_${n}`
+const numberToThemeFontSize = (n) => `_${n}`
 
-const fontSizes = Array(445)
+const fontSizes = (n) => Array(n || 445)
   .fill(0)
   .reduce(
     (acc, _, n) => ({
@@ -13,4 +13,4 @@ const fontSizes = Array(445)
     {},
   )
 
-export default fontSizes();
+export default fontSizes;
